@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore all files in /data except documentation
+/data/*
+!data/.gitkeep
+!data/DATA_DOWNLOAD.txt
