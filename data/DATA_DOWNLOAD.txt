@@ -1,0 +1,10 @@
+# Titanic Dataset Download Instructions
+
+This project uses the Titanic dataset from Kaggle.
+
+To download:
+1. Go to https://www.kaggle.com/competitions/titanic/data
+2. Accept the competition rules and download:
+   - train.csv
+   - test.csv
+3. Place them into the `data/` folder.
