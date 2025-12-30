@@ -173,6 +173,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# IDE configurations
+.vscode/
+
 # Ignore all files in /data except documentation
 /data/*
 !data/.gitkeep
