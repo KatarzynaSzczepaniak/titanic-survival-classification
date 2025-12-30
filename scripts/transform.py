@@ -11,18 +11,16 @@ $ python3 transform.py
 # --- Imports ---
 
 # Standard libraries
-from typing import List, Tuple, Optional
+from typing import List, Optional, Tuple
 
 # Third-party libraries
 import numpy as np
 import pandas as pd
-
-# scikit-learn
+from sklearn.compose import make_column_selector, make_column_transformer
+from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
-from sklearn.compose import make_column_transformer, make_column_selector
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
 def transform_data(
@@ -102,7 +100,9 @@ def main():
     assert X_valid.shape[0] == y_valid.shape[0]
 
     print(
-        f"Train shape: {X_train.shape}, Valid shape: {X_valid.shape}, Test shape: {X_test.shape}"
+        f"Train shape: {X_train.shape}, "
+        f"Valid shape: {X_valid.shape}, "
+        f"Test shape: {X_test.shape}"
     )
 
 

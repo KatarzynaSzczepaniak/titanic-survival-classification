@@ -13,34 +13,14 @@ $ python dl_train.py --framework pytorch --ensemble
 
 # Standard libraries
 import argparse
-from typing import Dict, Any
+from typing import Any, Dict
 
 # Third-party libraries
-import numpy as np
-import pandas as pd
-
-# Tensorflow
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import BatchNormalization, Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.losses import BinaryCrossentropy
-from tensorflow.keras.metrics import BinaryAccuracy
-from tensorflow.keras.callbacks import EarlyStopping
-
 # PyTorch
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import TensorDataset, DataLoader
-from torch.nn import BCELoss
-
 # Scikit-learn
 from sklearn.ensemble import VotingClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import classification_report
 
-from preprocess import get_data
-from transform import transform_data
+# Tensorflow
 
 
 def run_keras_gridsearch() -> Dict[str, Dict[str, Any]]:

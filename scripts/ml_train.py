@@ -11,20 +11,17 @@ $ python ml_train.py
 # --- Imports ---
 
 # Third-party libraries
-import pandas as pd
-from xgboost import XGBClassifier
-
-# Scikit-learn
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.model_selection import GridSearchCV
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import classification_report, accuracy_score
-
-from preprocess import get_data
 from transform import transform_data
+from xgboost import XGBClassifier
+
+from .preprocess import get_data
 
 
 def run_experiments() -> None:
